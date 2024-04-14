@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MongoDB.Driver;
 using MultiShop.Catatalog.Dtos.ProductDetailsDtos;
-using MultiShop.Catatalog.Dtos.ProductDetailsDtos;
 using MultiShop.Catatalog.Entities;
 using MultiShop.Catatalog.Settings;
 
@@ -39,7 +38,7 @@ namespace MultiShop.Catatalog.Services.ProductDetailServices {
 
         public async Task UpdateProductDetailDtoAsync(UpdateProductDetailDto updateProductDetailDto) {
             var values = mapper.Map<ProductDetail>(updateProductDetailDto);
-            await _ProductDetailCollection.FindOneAndReplaceAsync(x => x.ProductDetailsID == updateProductDetailDto.ProductDetailId, values);
+            await _ProductDetailCollection.FindOneAndReplaceAsync(x => x.ProductDetailsID == updateProductDetailDto.ProductDetailsID, values);
         }
     }
 }
