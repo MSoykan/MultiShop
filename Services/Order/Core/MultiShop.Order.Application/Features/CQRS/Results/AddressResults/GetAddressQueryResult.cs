@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MultiShop.Order.Application.Features.CQRS.Results.AddressResults {
-    public class GetAddressQueryResult {
+    public class GetAddressQueryResult { // Will return the whole address table
         public int AddressId { get; set; }
         public string UserId { get; set; }
         public string District { get; set; }
