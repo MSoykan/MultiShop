@@ -7,14 +7,14 @@ using MultiShop.Order.Application.Features.CQRS.Queries.OrderDetailQueries;
 namespace MultiShop.Order.WebApi.Controllers {
     [Route("api/[controller]")]
     [ApiController]
-    public class OrderDetailController : ControllerBase {
+    public class OrderDetailsController : ControllerBase {
         private readonly GetOrderDetailByIdQueryHandler getOrderDetailByIdQueryHandler;
         private readonly GetOrderDetailQueryHandler getOrderDetailQueryHandler;
         private readonly CreateOrderDetailCommandHandler createOrderDetailCommandHandler;
         private readonly UpdateOrderDetailCommandHandler updateOrderDetailCommandHandler;
         private readonly RemoveOrderDetailCommandHandler removeOrderDetailCommandHandler;
 
-        public OrderDetailController(GetOrderDetailByIdQueryHandler getOrderDetailByIdQueryHandler, GetOrderDetailQueryHandler getOrderDetailQueryHandler, CreateOrderDetailCommandHandler createOrderDetailCommandHandler, UpdateOrderDetailCommandHandler updateOrderDetailCommandHandler, RemoveOrderDetailCommandHandler removeOrderDetailCommandHandler) {
+        public OrderDetailsController(GetOrderDetailByIdQueryHandler getOrderDetailByIdQueryHandler, GetOrderDetailQueryHandler getOrderDetailQueryHandler, CreateOrderDetailCommandHandler createOrderDetailCommandHandler, UpdateOrderDetailCommandHandler updateOrderDetailCommandHandler, RemoveOrderDetailCommandHandler removeOrderDetailCommandHandler) {
             this.getOrderDetailByIdQueryHandler = getOrderDetailByIdQueryHandler;
             this.getOrderDetailQueryHandler = getOrderDetailQueryHandler;
             this.createOrderDetailCommandHandler = createOrderDetailCommandHandler;

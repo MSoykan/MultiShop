@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MultiShop.Order.Application.Features.Mediator.Handlers.OrderingHandlers {
-    public class GetOrderingQueryHandler : IRequestHandler<GetOrderingQuery, List<GetOrderingQueryResult> {
+    public class GetOrderingQueryHandler : IRequestHandler<GetOrderingQuery, List<GetOrderingQueryResult>>{
         private readonly IRepository<Ordering> repository;
 
         public GetOrderingQueryHandler(IRepository<Ordering> repository) {

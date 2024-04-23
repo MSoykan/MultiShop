@@ -11,3 +11,4 @@ namespace MultiShop.Order.Application.Features.Mediator.Results.OrderingResults 
         public decimal TotalPrice { get; set; }
         public DateTime OrderDate { get; set; }
     }
+}
