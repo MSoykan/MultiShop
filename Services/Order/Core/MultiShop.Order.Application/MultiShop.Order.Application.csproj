@@ -8,7 +8,10 @@
 
   <ItemGroup>
     <Folder Include="Features\Mediator\" />
-    <Folder Include="Features\CQRS\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MultiShop.Order.Domain\MultiShop.Order.Domain.csproj" />
   </ItemGroup>
 
 </Project>

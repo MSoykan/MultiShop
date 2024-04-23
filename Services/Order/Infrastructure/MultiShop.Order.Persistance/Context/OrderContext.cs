@@ -12,9 +12,9 @@ namespace MultiShop.Order.Persistance.Context {
             optionsBuilder.UseSqlServer("Server=....;Initial Catalog=MultiShopOrderDb;Integrated Security=true;");
         }
 
-        public DbSet<Address> Address { get; set; }
+        public DbSet<Address> Addresses { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
-        public DbSet<Ordering> Ordering { get; set; }
+        public DbSet<Ordering> Orderings { get; set; }
 
 
     }
