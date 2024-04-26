@@ -24,13 +24,13 @@ namespace MultiShop.Order.WebApi.Controllers {
 
         [HttpGet]
         public async Task<IActionResult> AddressList() {
-            var values = getAddressQueryHandler.Handle();
+            var values =await getAddressQueryHandler.Handle();
             return Ok(values);
         }
 
-        [HttpGet("{id")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetAddressById(int id) {
-            var values = getAddressByIdQueryHandler.Handle(new GetAddressByIdQuery(id));
+            var values =await getAddressByIdQueryHandler.Handle(new GetAddressByIdQuery(id));
             return Ok(values);
         }
 

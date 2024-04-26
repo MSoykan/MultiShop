@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace MultiShop.Order.Persistance.Context {
     public class OrderContext : DbContext{
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-            optionsBuilder.UseSqlServer("Server=....;Initial Catalog=MultiShopOrderDb;Integrated Security=true;");
+            optionsBuilder.UseSqlServer("Server=localhost,1440;Initial Catalog=MultiShopOrderDb;User=sa;Password=123456aA*;Encrypt=false");
         }
 
         public DbSet<Address> Addresses { get; set; }
