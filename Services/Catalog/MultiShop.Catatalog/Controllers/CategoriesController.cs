@@ -6,7 +6,7 @@ using MultiShop.Catatalog.Dtos.CategoryDtos;
 using MultiShop.Catatalog.Services.CategoryServices;
 
 namespace MultiShop.Catatalog.Controllers {
-    [Authorize]
+    [Authorize("CatalogReadPermission")]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase {
@@ -24,6 +24,7 @@ namespace MultiShop.Catatalog.Controllers {
         }
 
         [HttpGet("{id}")]
+        [Authorize("CatalogFullPermission")]
         public async Task<IActionResult> GetCategoryById(string id) {
             var values = await categoryService.GetByIdCategoryAsync(id);
             return Ok(values);

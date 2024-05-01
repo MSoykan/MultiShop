@@ -16,6 +16,17 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     
 });
 
+builder.Services.AddAuthorization(opt => {
+    opt.AddPolicy("CatalogReadPermission", policy => {
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim("scope", "CatalogReadPermission");
+    });
+    opt.AddPolicy("CatalogFullPermission", policy => {
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim("scope", "CatalogFullPermission");
+    });
+});
+
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductDetailService, ProductDetailService>();
