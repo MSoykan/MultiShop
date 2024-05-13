@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 namespace MultiShop.WebUI.Controllers {
-    public class AdminLayoutController : Controller {
-        public IActionResult Index() {
+    public class UILayoutController : Controller {
+        public IActionResult _UILayout() {
             return View();
         }
     }
